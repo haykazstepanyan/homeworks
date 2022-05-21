@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Roboto;
 }
 
 /* Common styles start */
@@ -12,7 +13,6 @@
   --rectangle-width: 24px;
 }
 body {
-  font-family: Roboto;
   background-color: #1f2224;
   color: #d6ddde;
 }
@@ -72,7 +72,7 @@ body {
   padding-left: 72px;
 }
 .left_distance_margin_xs {
-  margin-left: 14px;
+  margin-left: 12px;
 }
 .left_distance_margin_m {
   margin-left: 48px;
@@ -98,6 +98,7 @@ body {
 .main-heading {
   font-size: 28px;
   line-height: 33px;
+  font-weight: 400;
 }
 .packages {
   align-items: center;
@@ -115,6 +116,11 @@ body {
   height: 30px;
   width: 48px;
   opacity: 0.25;
+}
+.packages__item:hover,
+.packages__item:hover .packages__name {
+  opacity: 1;
+  cursor: pointer;
 }
 .packages__item_green {
   background-color: #499861;
@@ -137,7 +143,7 @@ body {
 .packages__item_lightgreen::before,
 .packages__item_green::before,
 .packages__item_yellow::before {
-  border-top: 4px solid #131718;
+  border-top: 4px solid #1f2224;
 }
 .packages__item_active,
 .packages__item_active .packages__name {
@@ -164,7 +170,6 @@ body {
 }
 .packages__name {
   display: inline-block;
-  width: 100%;
   background-color: #000;
   opacity: 0.5;
   width: 56px;
@@ -181,10 +186,11 @@ body {
   border-bottom: 1px solid rgba(139, 144, 145, 0.25);
 }
 .navigation__links {
-  padding: 28px 0 23px;
   margin-right: 63px;
 }
 .navigation__links_text_style {
+  display: inline-block;
+  padding: 28px 0 23px;
   text-decoration: none;
   color: #d6ddde;
   opacity: 0.6;
@@ -227,14 +233,14 @@ body {
 .systems-table__data {
   background-color: #1a1c1e;
   border-radius: 4px;
-  padding: 5px 16px;
+  padding: 6px 16px;
   align-items: center;
 }
 .systems-table__data_last {
-  padding-bottom: 0;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
-.arrow-down {
+.arrow-symbol {
+  font-size: 13px;
   margin-right: 15px;
 }
 .systems-table__button {
@@ -274,6 +280,7 @@ body {
   margin-bottom: 24px;
 }
 .upload-file__input {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -309,7 +316,6 @@ body {
   cursor: pointer;
 }
 .upload-file__input_text {
-  position: relative;
   margin-top: 15px;
 }
 /* Upload file end */
