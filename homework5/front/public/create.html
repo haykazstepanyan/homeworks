@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Todos</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-list-items">
+            <a class="nav-list-items-links show-page" href="/">Show</a>
+          </li>
+          <li class="nav-list-items">
+            <a class="nav-list-items-links create-page" href="/create"
+              >Create</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <div class="center-box section-form">
+        <form id="create-todo" class="todo-form">
+          <div>
+            <label for="title">Title</label>
+            <input id="title" type="text" />
+          </div>
+          <div>
+            <label for="description">Description</label>
+            <input id="description" type="text" />
+          </div>
+          <div>
+            <label for="deadline">Deadline</label>
+            <div id="deadline" class="dates">
+              <input id="dateTime" type="datetime-local" min="2022-04-04" />
+            </div>
+          </div>
+          <div>
+            <label for="status">Status (Completed)</label>
+            <div class="create-status">
+              <input id="status" type="checkbox" name="status" />
+            </div>
+          </div>
+          <div>
+            <button class="btn primary-btn" type="submit">Create todo</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <template id="modal-template">
+      <div id="modal" class="modal">
+        <p class="modal-error modal-message"></p>
+        <button class="btn alert-btn">OK</button>
+      </div>
+    </template>
+    <template id="notification-template">
+      <div class="notification">
+        <span class="done-icon"></span>
+        <p class="notification-text"></p>
+      </div>
+    </template>
+    <script src="./main.js"></script>
+  </body>
+</html>

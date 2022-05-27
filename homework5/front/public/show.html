@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Todos</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-list-items">
+            <a class="nav-list-items-links show-page" href="/">Show</a>
+          </li>
+          <li class="nav-list-items">
+            <a class="nav-list-items-links create-page" href="/create"
+              >Create</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <div class="page-name">
+        <h1>Todos</h1>
+      </div>
+    </div>
+    <template id="todos-template">
+      <div class="todos-list"></div>
+    </template>
+    <template id="delete-modal-template">
+      <div id="modal" class="modal warning">
+        <p class="modal-error modal-message">
+          Are you sure you want to delete todo?
+        </p>
+        <div>
+          <button class="btn primary-btn close-modal">Cancel</button>
+          <button class="btn alert-btn submit-modal">Delete</button>
+        </div>
+      </div>
+    </template>
+    <template id="update-modal-template">
+      <div id="modal" class="modal update">
+        <p class="modal-error modal-message"></p>
+        <div class="update-inputs">
+          <input type="text" name="title" class="update-title" />
+        </div>
+        <div class="update-inputs">
+          <input type="text" name="description" class="update-description" />
+        </div>
+        <div class="update-inputs">
+          <input type="datetime-local" class="update-date" min="2022-04-04" />
+        </div>
+        <div class="update-inputs">
+          <label for="status">Status (Completed)</label>
+          <div class="create-status">
+            <input type="checkbox" name="status" class="update-status" />
+          </div>
+        </div>
+        <div class="update-buttons">
+          <button class="btn alert-btn close-modal">Cancel</button>
+          <button class="btn primary-btn submit-modal">Update</button>
+        </div>
+      </div>
+    </template>
+    <template id="notification-template">
+      <div class="notification">
+        <span class="done-icon"></span>
+        <p class="notification-text"></p>
+      </div>
+    </template>
+    <script src="./main.js"></script>
+  </body>
+</html>
